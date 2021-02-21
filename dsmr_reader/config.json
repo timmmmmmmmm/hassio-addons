@@ -8,13 +8,17 @@
   "startup": "application",
   "boot": "auto",
   "uart": true,
+  "ingress": true,
+  "ingress_port": 8080,
   "webui": "http://[HOST]:[PORT:7777]",
   "map": ["backup:rw"],
   "ports": {
-    "80/tcp": 7777
+    "80/tcp": 7777,
+    "8080/tcp": 7778
   },
   "ports_description": {
-    "80/tcp": "Web interface (Ingress not working yet)"
+    "80/tcp": "Web interface (Ingress not working yet)",
+    "8080/tcp": "Web interface (Test)"
   },
   "options": {
     "DSMRREADER_ADMIN_USER": "admin",

@@ -4,6 +4,7 @@ FROM $BUILD_FROM
 ENV LANG C.UTF-8
 
 # INGRESS (Not working yet)
+COPY dsmr-ha.conf /etc/nginx/conf.d/dsmr-ha.conf
 RUN echo "X_FRAME_OPTIONS = 'ALLOWALL'" >> /dsmr/dsmrreader/settings.py
 #RUN echo "STATIC_URL = '/hassio/ingress/local_dsmr_reader/static/'" >> /dsmr/dsmrreader/settings.py
 #RUN echo "FORCE_SCRIPT_NAME = '/hassio/ingress/local_dsmr_reader'" >> /dsmr/dsmrreader/settings.py
